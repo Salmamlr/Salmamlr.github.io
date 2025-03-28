@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('Fondo1.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Mantener el fondo fijo mientras se hace scroll */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: absolute; /* Mantenerlo absoluto para centrarlo en la pantalla */
+    top: 50%; /* Posicionar verticalmente en el centro */
+    left: 50%; /* Posicionar horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Ajustar la posición para centrarlo */
+    width: 80%; /* Ajustar el ancho del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Asegura que los botones estén centrados verticalmente */
+}
+
+.box {
+    position: relative;
+    width: 60%; /* Reducir el ancho de los botones */
+    height: 50px;
+    background-color: rgb(154, 217, 234);
+    border: none;
+    margin: 10px 0; /* Reducir el margen */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button { 
+    position: relative;
+    background-color: rgb(154, 217, 234);
+    border: 5px solid rgb(112, 146, 191); /* Reducir el grosor del borde */
+    padding: 10px 30px; /* Reducir el tamaño del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    font-weight: bold;
+    max-width: 90%; /* Limitar el tamaño máximo */
+}
+
+/* Estilos para los enlaces en el pie de página */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 15px; /* Reducir el tamaño del padding */
+    border-radius: 5px;
+}
+
+.footer a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        width: 80%; /* Aumentar el ancho de los botones en pantallas pequeñas */
+        padding: 10px; /* Reducir padding en dispositivos pequeños */
+    }
+
+    .box {
+        width: 80%; /* Aumentar el ancho de los botones en pantallas pequeñas */
+        margin: 10px 0;
+    }
+
+    .button {
+        font-size: 14px; /* Reducir el tamaño de la fuente en dispositivos pequeños */
+        padding: 8px 20px; /* Ajustar el tamaño del botón */
+    }
+
+    .footer a {
+        font-size: 14px; /* Reducir el tamaño de los enlaces */
+        padding: 8px 12px;
+    }
+}
